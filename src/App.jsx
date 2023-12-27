@@ -41,7 +41,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center md:space-x-6">
             <div className="md:w-1/2">
               <img
-                src="./public/Website.png"
+                src="public/Website.png"
                 alt="MedChain Image"
                 className="rounded-lg shadow-xl"
               />
