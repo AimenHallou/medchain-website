@@ -4,6 +4,8 @@ import "./App.css";
 import { MdOutlineSecurity } from "react-icons/md";
 import { GrStorage } from "react-icons/gr";
 import { TbArrowsExchange } from "react-icons/tb";
+import websiteImage from './assets/Website.png';
+
 
 function App() {
   const [emailBody, setEmailBody] = useState("");
@@ -41,7 +43,7 @@ function App() {
           <div className="flex flex-col md:flex-row items-center md:space-x-6">
             <div className="md:w-1/2">
               <img
-                src="public/Website.png"
+                src={websiteImage}
                 alt="MedChain Image"
                 className="rounded-lg shadow-xl"
               />
