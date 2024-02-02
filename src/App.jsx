@@ -4,19 +4,33 @@ import "./App.css";
 import { MdOutlineSecurity } from "react-icons/md";
 import { GrStorage } from "react-icons/gr";
 import { TbArrowsExchange } from "react-icons/tb";
-import websiteImage from './assets/Website.png';
-
+import websiteImage from "./assets/Website.png";
 
 function App() {
   const [emailBody, setEmailBody] = useState("");
 
-
-  const mailtoLink = `mailto:your-email@example.com?subject=Contact from Website&body=${encodeURIComponent(emailBody)}`;
+  const mailtoLink = `mailto:your-email@example.com?subject=Contact from Website&body=${encodeURIComponent(
+    emailBody
+  )}`;
 
   return (
     <div className="App min-h-screen flex flex-col bg-gray-800 text-gray-200">
+      {/* Navbar */}
+      <nav className="bg-blue-900 text-white w-full fixed top-0 z-50">
+        <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+          <img
+            src="src/assets/logo.png"
+            alt="MedChain Logo"
+            className="h-12 w-18"
+          />
+          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+            Access App
+          </button>
+        </div>
+      </nav>
+
       {/* Home Section */}
-      <section className="home py-20 bg-blue-900 flex flex-col justify-center items-center space-y-4">
+      <section className="home pt-24 pb-20 bg-blue-900 flex flex-col justify-center items-center space-y-4">
         <div className="text-center space-y-2">
           <h1 className="text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-300 to-blue-600">
             Welcome to MedChain
@@ -29,9 +43,6 @@ function App() {
           A cutting-edge platform integrating blockchain technology for secure
           and efficient data management in healthcare.
         </p>
-        {/* <button className="mt-6 px-8 py-3 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
-          Learn More
-        </button> */}
       </section>
 
       {/* About Section */}
