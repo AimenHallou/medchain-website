@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 
+import { Link } from "react-router-dom";
 import { MdOutlineSecurity } from "react-icons/md";
 import { GrStorage } from "react-icons/gr";
 import { TbArrowsExchange } from "react-icons/tb";
@@ -23,9 +24,12 @@ function App() {
             alt="MedChain Logo"
             className="h-12 w-18"
           />
-          <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50">
+          <Link
+            to="/app"
+            className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
+          >
             Access App
-          </button>
+          </Link>
         </div>
       </nav>
 
