@@ -1,16 +1,17 @@
 import { useState } from "react";
 import "./App.css";
 
-import { Link } from "react-router-dom";
 import { MdOutlineSecurity } from "react-icons/md";
 import { GrStorage } from "react-icons/gr";
 import { TbArrowsExchange } from "react-icons/tb";
-import websiteImage from "./assets/Website.png";
+import websiteImage1 from "./assets/Website1.png";
+import websiteImage2 from "./assets/Website2.png";
+import logo from "./assets/logo.png";
 
 function App() {
   const [emailBody, setEmailBody] = useState("");
 
-  const mailtoLink = `mailto:your-email@example.com?subject=Contact from Website&body=${encodeURIComponent(
+  const mailtoLink = `mailto:aimen.hallou@medchain.pro?subject=Medchain&body=${encodeURIComponent(
     emailBody
   )}`;
 
@@ -19,17 +20,15 @@ function App() {
       {/* Navbar */}
       <nav className="bg-blue-900 text-white w-full fixed top-0 z-50">
         <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-          <img
-            src="src/assets/logo.png"
-            alt="MedChain Logo"
-            className="h-12 w-18"
-          />
-          <Link
-            to="/app"
+          <img src={logo} alt="MedChain Logo" className="h-12 w-18" />
+          <a
+            href="https://medchain.pro/"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition duration-200 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50"
           >
             Access App
-          </Link>
+          </a>
         </div>
       </nav>
 
@@ -52,18 +51,23 @@ function App() {
       {/* About Section */}
       <section className="about bg-gray-900 py-20 px-6 md:px-12">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-5xl font-bold text-center text-blue-500 mb-6">
+          <h2 className="text-5xl font-bold text-center text-blue-500 mb-12">
             About MedChain
           </h2>
-          <div className="flex flex-col md:flex-row items-center md:space-x-6">
-            <div className="md:w-1/2">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="md:w-1/2 flex flex-col space-y-6">
               <img
-                src={websiteImage}
-                alt="MedChain Image"
+                src={websiteImage1}
+                alt="MedChain Interface"
+                className="rounded-lg shadow-xl"
+              />
+              <img
+                src={websiteImage2}
+                alt="MedChain Data Management"
                 className="rounded-lg shadow-xl"
               />
             </div>
-            <div className="md:w-1/2 mt-6 md:mt-0 text-white">
+            <div className="md:w-1/2 text-white md:pl-10">
               <p className="text-xl leading-relaxed">
                 MedChain is revolutionizing the field of healthcare data
                 management by integrating advanced blockchain technology. Our
