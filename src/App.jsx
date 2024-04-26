@@ -11,7 +11,7 @@ import logo from "./assets/logo.png";
 function App() {
   const [emailBody, setEmailBody] = useState("");
 
-  const mailtoLink = `mailto:aimen.hallou@medchain.pro?subject=Medchain&body=${encodeURIComponent(
+  const mailtoLink = `mailto:businessdevelopment@medchain.pro?subject=Medchain&body=${encodeURIComponent(
     emailBody
   )}`;
 
